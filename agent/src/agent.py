@@ -7,20 +7,20 @@ The agent uses tools to create, read, update, and delete todos.
 
 from pydantic_ai import Agent
 from pydantic_ai.ag_ui import StateDeps
-from pydantic_ai.models.openai import OpenAIResponsesModel
 from dotenv import load_dotenv
 from models import TodoState
 from tools import tools
+from copilot_model import CopilotModel
 
-# Load environment variables (OPENAI_API_KEY, LOGFIRE_TOKEN, etc.)
+# Load environment variables (LOGFIRE_TOKEN, etc.)
 load_dotenv()
 
 # Create the agent
-# - model: The LLM to use (GPT-4.1-mini via OpenAI)
+# - model: GitHub Copilot SDK model (uses the copilot CLI binary)
 # - deps_type: The type of dependencies/state passed to tools (StateDeps wraps TodoState for AG-UI)
 # - tools: Functions the agent can call to interact with the todo list
 agent = Agent(
-  model=OpenAIResponsesModel('gpt-4.1-mini'),
+  model=CopilotModel(model_name_value="gpt-4.1"),
   deps_type=StateDeps[TodoState],
   tools=tools,
 )
