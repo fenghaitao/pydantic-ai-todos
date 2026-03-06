@@ -30,7 +30,7 @@ dependencies = [
 requires-dist = [
     { name = "github-copilot-sdk" },
     { name = "logfire", specifier = ">=4.10.0" },
-    { name = "pydantic-ai-slim", extras = ["ag-ui"], editable = "../../pydantic-ai/pydantic_ai_slim" },
+    { name = "pydantic-ai-slim", extras = ["ag-ui"], editable = "../pydantic-ai/pydantic_ai_slim" },
     { name = "python-dotenv" },
     { name = "uvicorn" },
 ]
@@ -1043,7 +1043,7 @@ wheels = [
 
 [[package]]
 name = "pydantic-ai-slim"
-source = { editable = "../../pydantic-ai/pydantic_ai_slim" }
+source = { editable = "../pydantic-ai/pydantic_ai_slim" }
 dependencies = [
     { name = "genai-prices" },
     { name = "griffe" },
@@ -1088,8 +1088,8 @@ requires-dist = [
     { name = "prefect", marker = "extra == 'prefect'", specifier = ">=3.4.21" },
     { name = "prompt-toolkit", marker = "extra == 'cli'", specifier = ">=3" },
     { name = "pydantic", specifier = ">=2.10" },
-    { name = "pydantic-evals", marker = "extra == 'evals'", editable = "../../pydantic-ai/pydantic_evals" },
-    { name = "pydantic-graph", editable = "../../pydantic-ai/pydantic_graph" },
+    { name = "pydantic-evals", marker = "extra == 'evals'", editable = "../pydantic-ai/pydantic_evals" },
+    { name = "pydantic-graph", editable = "../pydantic-ai/pydantic_graph" },
     { name = "pyperclip", marker = "extra == 'cli'", specifier = ">=1.9.0" },
     { name = "requests", marker = "extra == 'vertexai'", specifier = ">=2.32.2" },
     { name = "rich", marker = "extra == 'cli'", specifier = ">=13" },
@@ -1131,7 +1131,7 @@ wheels = [
 
 [[package]]
 name = "pydantic-graph"
-source = { editable = "../../pydantic-ai/pydantic_graph" }
+source = { editable = "../pydantic-ai/pydantic_graph" }
 dependencies = [
     { name = "httpx" },
     { name = "logfire-api" },

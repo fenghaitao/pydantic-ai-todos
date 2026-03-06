@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-pydantic-ai-slim = { path = "../../pydantic-ai/pydantic_ai_slim", editable = true }
+pydantic-ai-slim = { path = "../pydantic-ai/pydantic_ai_slim", editable = true }
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]
